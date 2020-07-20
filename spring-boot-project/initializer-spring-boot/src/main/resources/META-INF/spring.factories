@@ -1,0 +1,3 @@
+org.springframework.context.ApplicationContextInitializer=me.crw.initializer.FirstInitializer
+
+org.springframework.context.ApplicationListener=me.crw.listener.FirstListener,me.crw.listener.ForthListener
