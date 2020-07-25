@@ -2,6 +2,7 @@ package me.crw;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Conditional;
 
 /**
  * ClassName: InitializerApplication
@@ -12,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @create 2020-07-15-17:41
  * @since JDK 1.8
  */
+@Conditional({WindowsCondition.class})
 @SpringBootApplication
 public class InitializerApplication {
 	public static void main(String[] args) {

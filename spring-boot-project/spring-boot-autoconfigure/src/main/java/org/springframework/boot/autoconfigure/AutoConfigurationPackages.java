@@ -16,16 +16,8 @@
 
 package org.springframework.boot.autoconfigure;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.config.BeanDefinition;
@@ -37,6 +29,8 @@ import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.StringUtils;
+
+import java.util.*;
 
 /**
  * Class for storing auto-configuration packages for reference later (e.g. by JPA entity
@@ -90,6 +84,8 @@ public abstract class AutoConfigurationPackages {
 	 * @param packageNames the package names to set
 	 */
 	public static void register(BeanDefinitionRegistry registry, String... packageNames) {
+		// BEAN = AutoConfigurationPackages.class.getName()
+		// org.springframework.boot.autoconfigure.AutoConfigurationPackages
 		if (registry.containsBeanDefinition(BEAN)) {
 			BeanDefinition beanDefinition = registry.getBeanDefinition(BEAN);
 			ConstructorArgumentValues constructorArguments = beanDefinition
@@ -98,6 +94,7 @@ public abstract class AutoConfigurationPackages {
 					addBasePackages(constructorArguments, packageNames));
 		}
 		else {
+			// 注册  org.springframework.boot.autoconfigure.BasePackages
 			GenericBeanDefinition beanDefinition = new GenericBeanDefinition();
 			beanDefinition.setBeanClass(BasePackages.class);
 			beanDefinition.getConstructorArgumentValues().addIndexedArgumentValue(0,
@@ -126,6 +123,8 @@ public abstract class AutoConfigurationPackages {
 		@Override
 		public void registerBeanDefinitions(AnnotationMetadata metadata,
 				BeanDefinitionRegistry registry) {
+			// 注册 BEAN
+			// new PackageImport(metadata).getPackageName()：获取基础包名
 			register(registry, new PackageImport(metadata).getPackageName());
 		}
 
