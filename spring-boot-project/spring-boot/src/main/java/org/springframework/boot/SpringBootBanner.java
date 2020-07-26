@@ -16,12 +16,12 @@
 
 package org.springframework.boot;
 
-import java.io.PrintStream;
-
 import org.springframework.boot.ansi.AnsiColor;
 import org.springframework.boot.ansi.AnsiOutput;
 import org.springframework.boot.ansi.AnsiStyle;
 import org.springframework.core.env.Environment;
+
+import java.io.PrintStream;
 
 /**
  * Default Banner implementation which writes the 'Spring' banner.
@@ -45,12 +45,14 @@ class SpringBootBanner implements Banner {
 	@Override
 	public void printBanner(Environment environment, Class<?> sourceClass,
 			PrintStream printStream) {
+		// 获取默认的 banner
 		for (String line : BANNER) {
 			printStream.println(line);
 		}
 		String version = SpringBootVersion.getVersion();
 		version = (version != null) ? " (v" + version + ")" : "";
 		StringBuilder padding = new StringBuilder();
+		// 打印默认 banner 下的文字
 		while (padding.length() < STRAP_LINE_SIZE
 				- (version.length() + SPRING_BOOT.length())) {
 			padding.append(" ");

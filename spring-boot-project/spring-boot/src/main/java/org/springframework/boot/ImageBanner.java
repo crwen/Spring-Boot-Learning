@@ -16,13 +16,12 @@
 
 package org.springframework.boot;
 
-import java.awt.Color;
-import java.awt.Image;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.PrintStream;
-import java.util.Iterator;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.boot.ansi.*;
+import org.springframework.core.env.Environment;
+import org.springframework.core.io.Resource;
+import org.springframework.util.Assert;
 
 import javax.imageio.ImageIO;
 import javax.imageio.ImageReadParam;
@@ -30,18 +29,12 @@ import javax.imageio.ImageReader;
 import javax.imageio.metadata.IIOMetadata;
 import javax.imageio.metadata.IIOMetadataNode;
 import javax.imageio.stream.ImageInputStream;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
-import org.springframework.boot.ansi.AnsiBackground;
-import org.springframework.boot.ansi.AnsiColor;
-import org.springframework.boot.ansi.AnsiColors;
-import org.springframework.boot.ansi.AnsiElement;
-import org.springframework.boot.ansi.AnsiOutput;
-import org.springframework.core.env.Environment;
-import org.springframework.core.io.Resource;
-import org.springframework.util.Assert;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintStream;
+import java.util.Iterator;
 
 /**
  * Banner implementation that prints ASCII art generated from an image resource
@@ -100,6 +93,7 @@ public class ImageBanner implements Banner {
 
 	private void printBanner(Environment environment, PrintStream out)
 			throws IOException {
+		// 获取 width height margin invert 属性
 		int width = getProperty(environment, "width", Integer.class, 76);
 		int height = getProperty(environment, "height", Integer.class, 0);
 		int margin = getProperty(environment, "margin", Integer.class, 2);

@@ -16,18 +16,17 @@
 
 package org.springframework.boot;
 
+import org.apache.commons.logging.Log;
+import org.springframework.core.env.Environment;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
+import org.springframework.util.StringUtils;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.commons.logging.Log;
-
-import org.springframework.core.env.Environment;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.ResourceLoader;
-import org.springframework.util.StringUtils;
 
 /**
  * Class used by {@link SpringApplication} to print the application banner.
@@ -67,25 +66,31 @@ class SpringApplicationBannerPrinter {
 	}
 
 	public Banner print(Environment environment, Class<?> sourceClass, PrintStream out) {
+		// 获取 banner，优先获取配置文件中的 banner，其次是兜底 banner，否则文默认 banner
 		Banner banner = getBanner(environment);
+		// 打印banner
 		banner.printBanner(environment, sourceClass, out);
 		return new PrintedBanner(banner, sourceClass);
 	}
 
 	private Banner getBanner(Environment environment) {
 		Banners banners = new Banners();
+		// 添加 banner
 		banners.addIfNotNull(getImageBanner(environment));
 		banners.addIfNotNull(getTextBanner(environment));
 		if (banners.hasAtLeastOneBanner()) {
 			return banners;
 		}
+		// 如果设置了兜底 banner，返回兜底banner
 		if (this.fallbackBanner != null) {
 			return this.fallbackBanner;
 		}
+		// 返回默认的 banner
 		return DEFAULT_BANNER;
 	}
 
 	private Banner getTextBanner(Environment environment) {
+		// 获取 spring.banner.location 值，默认为 banner.txt
 		String location = environment.getProperty(BANNER_LOCATION_PROPERTY,
 				DEFAULT_BANNER_LOCATION);
 		Resource resource = this.resourceLoader.getResource(location);
@@ -96,11 +101,13 @@ class SpringApplicationBannerPrinter {
 	}
 
 	private Banner getImageBanner(Environment environment) {
+		// 获取 spring.banner.image.location
 		String location = environment.getProperty(BANNER_IMAGE_LOCATION_PROPERTY);
 		if (StringUtils.hasLength(location)) {
 			Resource resource = this.resourceLoader.getResource(location);
 			return resource.exists() ? new ImageBanner(resource) : null;
 		}
+		// 设置默认的图片banner (后缀名为 gif jpg png)
 		for (String ext : IMAGE_EXTENSION) {
 			Resource resource = this.resourceLoader.getResource("banner." + ext);
 			if (resource.exists()) {
