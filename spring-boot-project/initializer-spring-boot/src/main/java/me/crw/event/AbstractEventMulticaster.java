@@ -7,9 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ClassName: AbstractEventMulticaster
- * Description:
- * date: 2020/7/18 11:10
+ * ClassName: AbstractEventMulticaster Description: date: 2020/7/18 11:10
  *
  * @author crwen
  * @create 2020-07-18-11:10
@@ -19,7 +17,7 @@ import java.util.List;
 public abstract class AbstractEventMulticaster implements EventMulticaster {
 
 	@Autowired
-	private List<WeatherListener> listenerList =new ArrayList<>();
+	private List<WeatherListener> listenerList = new ArrayList<>();
 
 	@Override
 	public void multicaster(WeatherEvent event) {
@@ -41,4 +39,5 @@ public abstract class AbstractEventMulticaster implements EventMulticaster {
 	abstract void doStart();
 
 	abstract void doEnd();
+
 }

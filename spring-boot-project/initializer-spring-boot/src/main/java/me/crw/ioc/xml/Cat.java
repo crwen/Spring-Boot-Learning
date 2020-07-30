@@ -1,9 +1,7 @@
 package me.crw.ioc.xml;
 
 /**
- * ClassName: Dog
- * Description:
- * date: 2020/7/19 17:11
+ * ClassName: Dog Description: date: 2020/7/19 17:11
  *
  * @author crwen
  * @create 2020-07-19-17:11
@@ -15,4 +13,5 @@ public class Cat extends Animal {
 	public String getName() {
 		return "cat";
 	}
+
 }

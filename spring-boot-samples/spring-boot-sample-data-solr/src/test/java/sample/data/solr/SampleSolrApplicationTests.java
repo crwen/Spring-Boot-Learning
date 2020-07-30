@@ -18,7 +18,6 @@ package sample.data.solr;
 
 import org.junit.Rule;
 import org.junit.Test;
-
 import org.springframework.boot.test.rule.OutputCapture;
 import org.springframework.core.NestedCheckedException;
 

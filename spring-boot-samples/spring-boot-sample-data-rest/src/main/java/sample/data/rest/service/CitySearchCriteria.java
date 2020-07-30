@@ -16,9 +16,9 @@
 
 package sample.data.rest.service;
 
-import java.io.Serializable;
-
 import org.springframework.util.Assert;
+
+import java.io.Serializable;
 
 public class CitySearchCriteria implements Serializable {
 

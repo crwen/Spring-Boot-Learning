@@ -6,9 +6,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Service;
 
 /**
- * ClassName: TestService
- * Description:
- * date: 2020/7/15 17:43
+ * ClassName: TestService Description: date: 2020/7/15 17:43
  *
  * @author crwen
  * @create 2020-07-15-17:43
@@ -20,7 +18,8 @@ public class TestService implements ApplicationContextAware {
 	private ApplicationContext applicationContext;
 
 	@Override
-	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+	public void setApplicationContext(ApplicationContext applicationContext)
+			throws BeansException {
 		this.applicationContext = applicationContext;
 	}
 
@@ -35,4 +34,5 @@ public class TestService implements ApplicationContextAware {
 	public String test3() {
 		return applicationContext.getEnvironment().getProperty("key3");
 	}
+
 }

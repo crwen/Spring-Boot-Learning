@@ -16,11 +16,7 @@
 
 package sample.session;
 
-import java.net.URI;
-import java.util.Base64;
-
 import org.junit.Test;
-
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.context.ServerPortInfoApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -29,6 +25,9 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
+
+import java.net.URI;
+import java.util.Base64;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

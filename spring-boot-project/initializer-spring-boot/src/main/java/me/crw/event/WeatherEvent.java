@@ -3,9 +3,7 @@ package me.crw.event;
 import org.springframework.stereotype.Component;
 
 /**
- * ClassName: WeatherEvent
- * Description:
- * date: 2020/7/18 11:04
+ * ClassName: WeatherEvent Description: date: 2020/7/18 11:04
  *
  * @author crwen
  * @create 2020-07-18-11:04

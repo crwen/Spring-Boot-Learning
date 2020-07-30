@@ -6,9 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * ClassName: TestController
- * Description:
- * date: 2020/7/15 17:42
+ * ClassName: TestController Description: date: 2020/7/15 17:42
  *
  * @author crwen
  * @create 2020-07-15-17:42
@@ -16,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class TestController {
-
 
 	@GetMapping("/hello")
 	public String hello() {
@@ -40,7 +37,5 @@ public class TestController {
 	public String test3() {
 		return testService.test3();
 	}
-
-
 
 }

@@ -16,10 +16,10 @@
 
 package sample.layout;
 
-import java.io.File;
-
 import org.springframework.boot.loader.tools.Layout;
 import org.springframework.boot.loader.tools.LayoutFactory;
+
+import java.io.File;
 
 public class SampleLayoutFactory implements LayoutFactory {
 

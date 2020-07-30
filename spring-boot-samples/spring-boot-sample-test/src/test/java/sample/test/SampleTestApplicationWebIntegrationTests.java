@@ -19,10 +19,6 @@ package sample.test;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import sample.test.domain.VehicleIdentificationNumber;
-import sample.test.service.VehicleDetails;
-import sample.test.service.VehicleDetailsService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -30,6 +26,9 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
+import sample.test.domain.VehicleIdentificationNumber;
+import sample.test.service.VehicleDetails;
+import sample.test.service.VehicleDetailsService;
 
 import static org.mockito.BDDMockito.given;
 

@@ -16,9 +16,9 @@
 
 package sample.data.solr;
 
-import java.util.List;
-
 import org.springframework.data.solr.repository.SolrCrudRepository;
+
+import java.util.List;
 
 public interface ProductRepository extends SolrCrudRepository<Product, String> {
 

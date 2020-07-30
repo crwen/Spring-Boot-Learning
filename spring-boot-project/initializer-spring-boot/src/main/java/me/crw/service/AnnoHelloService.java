@@ -7,9 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
- * ClassName: HelloService
- * Description:
- * date: 2020/7/19 17:00
+ * ClassName: HelloService Description: date: 2020/7/19 17:00
  *
  * @author crwen
  * @create 2020-07-19-17:00
@@ -41,7 +39,8 @@ public class AnnoHelloService {
 	}
 
 	public String hello() {
-		//return "hello";
+		// return "hello";
 		return animal.getName();
 	}
+
 }

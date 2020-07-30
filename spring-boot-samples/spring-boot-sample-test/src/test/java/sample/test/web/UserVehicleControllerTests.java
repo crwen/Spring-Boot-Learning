@@ -18,11 +18,6 @@ package sample.test.web;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import sample.test.WelcomeCommandLineRunner;
-import sample.test.domain.VehicleIdentificationNumber;
-import sample.test.service.VehicleDetails;
-import sample.test.service.VehicleIdentificationNumberNotFoundException;
-
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -31,6 +26,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import sample.test.WelcomeCommandLineRunner;
+import sample.test.domain.VehicleIdentificationNumber;
+import sample.test.service.VehicleDetails;
+import sample.test.service.VehicleIdentificationNumberNotFoundException;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.mockito.BDDMockito.given;

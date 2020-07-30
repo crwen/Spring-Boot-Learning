@@ -16,14 +16,8 @@
 
 package sample.atmosphere;
 
-import java.util.Collections;
-
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-
 import org.atmosphere.cpr.AtmosphereServlet;
 import org.atmosphere.cpr.ContainerInitializer;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -34,6 +28,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import java.util.Collections;
 
 @SpringBootConfiguration
 @EnableAutoConfiguration

@@ -15,14 +15,13 @@
  */
 package sample.data.couchbase;
 
-import java.net.ConnectException;
-
 import org.junit.Rule;
 import org.junit.Test;
-
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.test.rule.OutputCapture;
 import org.springframework.core.NestedCheckedException;
+
+import java.net.ConnectException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

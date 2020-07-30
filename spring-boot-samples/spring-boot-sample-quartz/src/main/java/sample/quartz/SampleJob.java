@@ -18,7 +18,6 @@ package sample.quartz;
 
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
-
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
 public class SampleJob extends QuartzJobBean {

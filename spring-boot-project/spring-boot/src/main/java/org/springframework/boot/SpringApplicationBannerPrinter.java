@@ -66,9 +66,8 @@ class SpringApplicationBannerPrinter {
 	}
 
 	public Banner print(Environment environment, Class<?> sourceClass, PrintStream out) {
-		// 获取 banner，优先获取配置文件中的 banner，其次是兜底 banner，否则文默认 banner
+		// 获取 banner，优先获取配置文件中的 banner，其次是兜底banner，否则文默认 banner
 		Banner banner = getBanner(environment);
-		// 打印banner
 		banner.printBanner(environment, sourceClass, out);
 		return new PrintedBanner(banner, sourceClass);
 	}

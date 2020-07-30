@@ -78,7 +78,7 @@ public class AutoConfigurationImportSelector
 
 	@Override
 	public String[] selectImports(AnnotationMetadata annotationMetadata) {
-		//判断是否禁用了自动装配的功能
+		// 判断是否禁用了自动装配的功能
 		if (!isEnabled(annotationMetadata)) {
 			return NO_IMPORTS;
 		}

@@ -16,10 +16,10 @@
 
 package sample.jetty;
 
+import org.springframework.stereotype.Component;
+
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-
-import org.springframework.stereotype.Component;
 
 /**
  * Simple {@link ServletContextListener} to test gh-2058.

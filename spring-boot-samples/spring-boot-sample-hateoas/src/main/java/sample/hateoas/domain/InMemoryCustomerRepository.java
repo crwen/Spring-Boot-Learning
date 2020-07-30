@@ -16,11 +16,11 @@
 
 package sample.hateoas.domain;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.stereotype.Repository;
 import org.springframework.util.ObjectUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Repository
 public class InMemoryCustomerRepository implements CustomerRepository {

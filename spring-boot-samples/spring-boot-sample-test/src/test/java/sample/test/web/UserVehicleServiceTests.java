@@ -26,9 +26,7 @@ import sample.test.domain.VehicleIdentificationNumber;
 import sample.test.service.VehicleDetails;
 import sample.test.service.VehicleDetailsService;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
-import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
+import static org.assertj.core.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.BDDMockito.given;
 

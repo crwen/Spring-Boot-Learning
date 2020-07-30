@@ -16,14 +16,13 @@
 
 package sample.test.web;
 
+import org.springframework.stereotype.Component;
+import org.springframework.util.Assert;
 import sample.test.domain.User;
 import sample.test.domain.UserRepository;
 import sample.test.service.VehicleDetails;
 import sample.test.service.VehicleDetailsService;
 import sample.test.service.VehicleIdentificationNumberNotFoundException;
-
-import org.springframework.stereotype.Component;
-import org.springframework.util.Assert;
 
 /**
  * Controller service used to provide vehicle information for a given user.

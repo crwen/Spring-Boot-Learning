@@ -1,9 +1,7 @@
 package me.crw.event;
 
 /**
- * ClassName: EventMulticaster
- * Description:
- * date: 2020/7/18 11:09
+ * ClassName: EventMulticaster Description: date: 2020/7/18 11:09
  *
  * @author crwen
  * @create 2020-07-18-11:09

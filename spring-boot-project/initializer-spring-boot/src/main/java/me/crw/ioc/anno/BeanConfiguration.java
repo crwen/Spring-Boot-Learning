@@ -6,9 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * ClassName: BeanConfiguration
- * Description:
- * date: 2020/7/19 18:03
+ * ClassName: BeanConfiguration Description: date: 2020/7/19 18:03
  *
  * @author crwen
  * @create 2020-07-19-18:03
@@ -21,4 +19,5 @@ public class BeanConfiguration {
 	Animal getDog() {
 		return new Dog();
 	}
+
 }

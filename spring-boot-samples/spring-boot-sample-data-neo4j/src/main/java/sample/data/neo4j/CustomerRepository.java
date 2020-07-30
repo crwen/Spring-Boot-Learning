@@ -16,9 +16,9 @@
 
 package sample.data.neo4j;
 
-import java.util.List;
-
 import org.springframework.data.neo4j.repository.Neo4jRepository;
+
+import java.util.List;
 
 public interface CustomerRepository extends Neo4jRepository<Customer, Long> {
 

@@ -19,7 +19,6 @@ package sample.data.neo4j;
 import org.junit.Rule;
 import org.junit.Test;
 import org.neo4j.driver.v1.exceptions.ServiceUnavailableException;
-
 import org.springframework.boot.test.rule.OutputCapture;
 
 import static org.assertj.core.api.Assertions.assertThat;

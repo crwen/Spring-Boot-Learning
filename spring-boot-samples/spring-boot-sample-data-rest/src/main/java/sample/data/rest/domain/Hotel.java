@@ -16,16 +16,9 @@
 
 package sample.data.rest.domain;
 
-import java.io.Serializable;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.SequenceGenerator;
-
 import org.hibernate.annotations.NaturalId;
+
+import java.io.Serializable;
 
 @Entity
 public class Hotel implements Serializable {

@@ -10,9 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * ClassName: FirstInitializer
- * Description:
- * date: 2020/7/14 19:50
+ * ClassName: FirstInitializer Description: date: 2020/7/14 19:50
  *
  * @author crwen
  * @create 2020-07-14-19:50
@@ -20,15 +18,18 @@ import java.util.Map;
  */
 
 @Order(3)
-public class ThirdInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
+public class ThirdInitializer
+		implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
-    @Override
-    public void initialize(ConfigurableApplicationContext applicationContext) {
-        ConfigurableEnvironment environment = applicationContext.getEnvironment();
-        Map<String, Object> map = new HashMap<>();
-        map.put("key3", "value3");
-        MapPropertySource mapPropertySource = new MapPropertySource("thirdInitializer", map);
-        environment.getPropertySources().addLast(mapPropertySource);
-        System.out.println("run thirdInitializer");
-    }
+	@Override
+	public void initialize(ConfigurableApplicationContext applicationContext) {
+		ConfigurableEnvironment environment = applicationContext.getEnvironment();
+		Map<String, Object> map = new HashMap<>();
+		map.put("key3", "value3");
+		MapPropertySource mapPropertySource = new MapPropertySource("thirdInitializer",
+				map);
+		environment.getPropertySources().addLast(mapPropertySource);
+		System.out.println("run thirdInitializer");
+	}
+
 }

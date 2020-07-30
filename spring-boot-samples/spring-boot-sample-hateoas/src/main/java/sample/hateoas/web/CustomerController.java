@@ -16,9 +16,6 @@
 
 package sample.hateoas.web;
 
-import sample.hateoas.domain.Customer;
-import sample.hateoas.domain.CustomerRepository;
-
 import org.springframework.hateoas.EntityLinks;
 import org.springframework.hateoas.ExposesResourceFor;
 import org.springframework.hateoas.Resource;
@@ -31,6 +28,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import sample.hateoas.domain.Customer;
+import sample.hateoas.domain.CustomerRepository;
 
 @Controller
 @RequestMapping("/customers")

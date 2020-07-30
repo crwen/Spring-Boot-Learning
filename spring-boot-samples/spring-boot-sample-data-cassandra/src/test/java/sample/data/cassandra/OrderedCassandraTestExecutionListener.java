@@ -19,7 +19,6 @@ package sample.data.cassandra;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.cassandraunit.spring.CassandraUnitDependencyInjectionTestExecutionListener;
-
 import org.springframework.core.Ordered;
 
 public class OrderedCassandraTestExecutionListener

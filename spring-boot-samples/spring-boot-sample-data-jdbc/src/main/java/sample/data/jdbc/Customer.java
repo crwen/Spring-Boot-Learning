@@ -16,9 +16,9 @@
 
 package sample.data.jdbc;
 
-import java.time.LocalDate;
-
 import org.springframework.data.annotation.Id;
+
+import java.time.LocalDate;
 
 class Customer {
 

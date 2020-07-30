@@ -16,15 +16,14 @@
 
 package sample.ant;
 
+import org.junit.Test;
+import org.springframework.boot.loader.tools.JavaExecutable;
+import org.springframework.util.FileCopyUtils;
+
 import java.io.File;
 import java.io.FileFilter;
 import java.io.InputStreamReader;
 import java.util.concurrent.TimeUnit;
-
-import org.junit.Test;
-
-import org.springframework.boot.loader.tools.JavaExecutable;
-import org.springframework.util.FileCopyUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

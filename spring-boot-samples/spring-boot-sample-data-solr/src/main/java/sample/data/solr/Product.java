@@ -16,13 +16,12 @@
 
 package sample.data.solr;
 
-import java.util.List;
-
 import org.apache.solr.client.solrj.beans.Field;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.solr.core.geo.Point;
 import org.springframework.data.solr.core.mapping.SolrDocument;
+
+import java.util.List;
 
 @SolrDocument(solrCoreName = "collection1")
 public class Product {

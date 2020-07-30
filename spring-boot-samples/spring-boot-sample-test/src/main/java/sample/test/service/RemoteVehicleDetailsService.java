@@ -18,14 +18,13 @@ package sample.test.service;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import sample.test.domain.VehicleIdentificationNumber;
-
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.RestTemplate;
+import sample.test.domain.VehicleIdentificationNumber;
 
 /**
  * {@link VehicleDetailsService} backed by a remote REST service.

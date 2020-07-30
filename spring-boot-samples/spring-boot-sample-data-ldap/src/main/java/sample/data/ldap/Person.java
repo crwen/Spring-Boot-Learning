@@ -16,11 +16,11 @@
 
 package sample.data.ldap;
 
-import javax.naming.Name;
-
 import org.springframework.ldap.odm.annotations.Attribute;
 import org.springframework.ldap.odm.annotations.Entry;
 import org.springframework.ldap.odm.annotations.Id;
+
+import javax.naming.Name;
 
 @Entry(objectClasses = { "person", "top" })
 public class Person {

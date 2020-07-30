@@ -3,12 +3,12 @@
  */
 package sample.jooq.domain;
 
-import javax.annotation.Generated;
-
 import org.jooq.ForeignKey;
 import org.jooq.Record;
 import org.jooq.UniqueKey;
 import org.jooq.impl.AbstractKeys;
+
+import javax.annotation.Generated;
 
 /**
  * A class modelling foreign key relationships between tables of the <code>PUBLIC</code>

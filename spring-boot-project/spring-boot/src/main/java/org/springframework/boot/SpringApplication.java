@@ -241,7 +241,7 @@ public class SpringApplication {
 		this.primarySources = new LinkedHashSet<>(Arrays.asList(primarySources));
 		this.webApplicationType = WebApplicationType.deduceFromClasspath();
 		// 设置系统初始化器
-		//getSpringFactoriesInstances(clazz)：获取clazz子类的实现
+		// getSpringFactoriesInstances(clazz)：获取clazz子类的实现
 		setInitializers((Collection) getSpringFactoriesInstances(
 				ApplicationContextInitializer.class));
 		// 设置监听器
@@ -411,7 +411,8 @@ public class SpringApplication {
 		ClassLoader classLoader = getClassLoader();
 		// Use names and ensure unique to protect against duplicates
 
-		// SpringFactoriesLoader.loadFactoryNames 获取META-INF/spring.factories 中 key 为 type 的类的全限定类名
+		// SpringFactoriesLoader.loadFactoryNames 获取META-INF/spring.factories 中 key 为 type
+		// 的类的全限定类名
 		Set<String> names = new LinkedHashSet<>(
 				SpringFactoriesLoader.loadFactoryNames(type, classLoader));
 		// 通过反射，创建系统加载器实例

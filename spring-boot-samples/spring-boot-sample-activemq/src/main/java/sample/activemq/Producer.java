@@ -16,12 +16,12 @@
 
 package sample.activemq;
 
-import javax.jms.Queue;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.jms.core.JmsMessagingTemplate;
 import org.springframework.stereotype.Component;
+
+import javax.jms.Queue;
 
 @Component
 public class Producer implements CommandLineRunner {

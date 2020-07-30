@@ -10,9 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * ClassName: FirstInitializer
- * Description:
- * date: 2020/7/14 19:50
+ * ClassName: FirstInitializer Description: date: 2020/7/14 19:50
  *
  * @author crwen
  * @create 2020-07-14-19:50
@@ -20,15 +18,18 @@ import java.util.Map;
  */
 
 @Order(2)
-public class SecondInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
+public class SecondInitializer
+		implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
-    @Override
-    public void initialize(ConfigurableApplicationContext applicationContext) {
-        ConfigurableEnvironment environment = applicationContext.getEnvironment();
-        Map<String, Object> map = new HashMap<>();
-        map.put("key2", "value2");
-        MapPropertySource mapPropertySource = new MapPropertySource("secondInitializer", map);
-        environment.getPropertySources().addLast(mapPropertySource);
-        System.out.println("run secondInitializer");
-    }
+	@Override
+	public void initialize(ConfigurableApplicationContext applicationContext) {
+		ConfigurableEnvironment environment = applicationContext.getEnvironment();
+		Map<String, Object> map = new HashMap<>();
+		map.put("key2", "value2");
+		MapPropertySource mapPropertySource = new MapPropertySource("secondInitializer",
+				map);
+		environment.getPropertySources().addLast(mapPropertySource);
+		System.out.println("run secondInitializer");
+	}
+
 }

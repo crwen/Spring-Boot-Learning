@@ -16,14 +16,12 @@
 
 package sample.jpa.repository;
 
-import java.util.List;
+import org.springframework.stereotype.Repository;
+import sample.jpa.domain.Note;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-
-import sample.jpa.domain.Note;
-
-import org.springframework.stereotype.Repository;
+import java.util.List;
 
 @Repository
 class JpaNoteRepository implements NoteRepository {

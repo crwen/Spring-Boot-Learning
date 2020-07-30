@@ -3,9 +3,7 @@ package me.crw.ioc.xml;
 import java.util.List;
 
 /**
- * ClassName: Student
- * Description:
- * date: 2020/7/19 16:56
+ * ClassName: Student Description: date: 2020/7/19 16:56
  *
  * @author crwen
  * @create 2020-07-19-16:56
@@ -51,10 +49,8 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student{" +
-				"name='" + name + '\'' +
-				", age=" + age +
-				", classList=[" + String.join(",", classList) +
-				"]}";
+		return "Student{" + "name='" + name + '\'' + ", age=" + age + ", classList=["
+				+ String.join(",", classList) + "]}";
 	}
+
 }

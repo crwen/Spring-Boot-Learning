@@ -16,9 +16,9 @@
 
 package sample.jpa.repository;
 
-import java.util.List;
-
 import sample.jpa.domain.Note;
+
+import java.util.List;
 
 public interface NoteRepository {
 

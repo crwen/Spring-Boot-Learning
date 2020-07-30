@@ -16,15 +16,14 @@
 
 package sample.devtools;
 
-import java.util.Date;
-
-import javax.annotation.PostConstruct;
-import javax.servlet.http.HttpSession;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpSession;
+import java.util.Date;
 
 @Controller
 public class MyController {

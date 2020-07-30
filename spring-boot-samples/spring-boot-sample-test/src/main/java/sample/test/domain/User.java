@@ -16,12 +16,12 @@
 
 package sample.test.domain;
 
+import org.springframework.util.Assert;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
-import org.springframework.util.Assert;
 
 /**
  * A user of the system.

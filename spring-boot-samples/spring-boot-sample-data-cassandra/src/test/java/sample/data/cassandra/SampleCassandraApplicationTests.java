@@ -16,8 +16,6 @@
 
 package sample.data.cassandra;
 
-import java.io.File;
-
 import org.cassandraunit.spring.CassandraDataSet;
 import org.cassandraunit.spring.EmbeddedCassandra;
 import org.junit.ClassRule;
@@ -26,12 +24,13 @@ import org.junit.rules.TestRule;
 import org.junit.runner.Description;
 import org.junit.runner.RunWith;
 import org.junit.runners.model.Statement;
-
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.rule.OutputCapture;
 import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.TestExecutionListeners.MergeMode;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.io.File;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

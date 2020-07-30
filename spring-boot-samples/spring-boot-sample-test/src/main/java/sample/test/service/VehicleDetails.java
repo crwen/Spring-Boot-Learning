@@ -18,7 +18,6 @@ package sample.test.service;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import org.springframework.util.Assert;
 
 /**

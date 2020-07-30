@@ -18,7 +18,6 @@ package sample.data.couchbase;
 
 import com.couchbase.client.java.repository.annotation.Field;
 import com.couchbase.client.java.repository.annotation.Id;
-
 import org.springframework.data.couchbase.core.mapping.Document;
 
 @Document

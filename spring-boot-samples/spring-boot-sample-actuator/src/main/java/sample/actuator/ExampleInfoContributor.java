@@ -16,11 +16,11 @@
 
 package sample.actuator;
 
-import java.util.Collections;
-
 import org.springframework.boot.actuate.info.Info;
 import org.springframework.boot.actuate.info.InfoContributor;
 import org.springframework.stereotype.Component;
+
+import java.util.Collections;
 
 @Component
 public class ExampleInfoContributor implements InfoContributor {

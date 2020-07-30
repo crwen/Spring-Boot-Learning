@@ -16,8 +16,6 @@
 
 package sample.data.elasticsearch;
 
-import java.io.File;
-
 import org.elasticsearch.client.transport.NoNodeAvailableException;
 import org.junit.ClassRule;
 import org.junit.Rule;
@@ -25,9 +23,10 @@ import org.junit.Test;
 import org.junit.rules.TestRule;
 import org.junit.runner.Description;
 import org.junit.runners.model.Statement;
-
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.test.rule.OutputCapture;
+
+import java.io.File;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

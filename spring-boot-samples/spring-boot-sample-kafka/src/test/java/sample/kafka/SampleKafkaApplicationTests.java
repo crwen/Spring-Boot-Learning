@@ -18,7 +18,6 @@ package sample.kafka;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.rule.OutputCapture;
 import org.springframework.kafka.test.context.EmbeddedKafka;

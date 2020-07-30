@@ -16,17 +16,11 @@
 
 package sample.test.web;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import sample.test.domain.User;
 import sample.test.service.VehicleDetails;
 import sample.test.service.VehicleIdentificationNumberNotFoundException;
-
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Controller to return vehicle information for a given {@link User}.

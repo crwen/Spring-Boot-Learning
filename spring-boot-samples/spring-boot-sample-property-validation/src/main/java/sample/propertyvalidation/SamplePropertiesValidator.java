@@ -16,11 +16,11 @@
 
 package sample.propertyvalidation;
 
-import java.util.regex.Pattern;
-
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
+
+import java.util.regex.Pattern;
 
 public class SamplePropertiesValidator implements Validator {
 

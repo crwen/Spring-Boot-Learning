@@ -1,9 +1,7 @@
 package me.crw.event;
 
 /**
- * ClassName: TestWeather
- * Description:
- * date: 2020/7/18 11:14
+ * ClassName: TestWeather Description: date: 2020/7/18 11:14
  *
  * @author crwen
  * @create 2020-07-18-11:14
@@ -18,11 +16,11 @@ public class TestWeather {
 		eventMulticaster.addListener(rainListener);
 		eventMulticaster.addListener(snowListener);
 
-
 		eventMulticaster.multicaster(new SnowEvent());
 		eventMulticaster.multicaster(new RainEvent());
 		eventMulticaster.removeListener(rainListener);
 		eventMulticaster.multicaster(new SnowEvent());
 		eventMulticaster.multicaster(new RainEvent());
 	}
+
 }
