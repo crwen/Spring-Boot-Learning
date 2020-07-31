@@ -1,5 +1,7 @@
 package me.crw;
 
+import org.springframework.util.StopWatch;
+
 /**
  * ClassName: Main Description: date: 2020/7/30 22:04
  *
@@ -9,10 +11,20 @@ package me.crw;
  */
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// ConfigurationMetadataAnnotationProcessor demo = new
 		// ConfigurationMetadataAnnotationProcessor();
-		System.out.println("demo");
+		StopWatch stopWatch = new StopWatch("myTask");
+		stopWatch.start("task1");
+		Thread.sleep(2000L);
+		stopWatch.stop();
+		stopWatch.start("task2");
+		Thread.sleep(3000L);
+		stopWatch.stop();
+		stopWatch.start("task3");
+		Thread.sleep(1000L);
+		stopWatch.stop();
+		System.out.println(stopWatch.prettyPrint());
 	}
 
 }

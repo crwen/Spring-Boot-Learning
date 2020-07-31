@@ -1,9 +1,7 @@
 package me.crw;
 
-import org.springframework.boot.ResourceBanner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.core.io.ClassPathResource;
 
 /**
  * ClassName: InitializerApplication Description: date: 2020/7/15 17:41
@@ -24,8 +22,8 @@ public class InitializerApplication {
 		// springApplication.addInitializers(new SecondInitializer());
 		// springApplication.setBanner(new ImageBanner(new
 		// ClassPathResource("banner.gif")));
-		springApplication
-				.setBanner(new ResourceBanner(new ClassPathResource("banner_bak.txt")));
+		//springApplication
+				//.setBanner(new ResourceBanner(new ClassPathResource("banner_bak.txt")));
 		springApplication.run(args);
 	}
 
