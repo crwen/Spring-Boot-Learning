@@ -21,7 +21,7 @@ public class InitializerApplication {
 		// springApplication.addListeners(new SecondListener());
 		// springApplication.addInitializers(new SecondInitializer());
 		// springApplication.setBanner(new ImageBanner(new
-		// ClassPathResource("banner.gif")));
+		// ClassPathResource("banner_bak.gif")));
 		//springApplication
 				//.setBanner(new ResourceBanner(new ClassPathResource("banner_bak.txt")));
 		springApplication.run(args);

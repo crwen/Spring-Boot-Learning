@@ -304,6 +304,7 @@ public class SpringApplication {
 						.logStarted(getApplicationLog(), stopWatch);
 			}
 			listeners.started(context);
+			// 调用启动加载器
 			callRunners(context, applicationArguments);
 		}
 		catch (Throwable ex) {
@@ -783,9 +784,12 @@ public class SpringApplication {
 
 	private void callRunners(ApplicationContext context, ApplicationArguments args) {
 		List<Object> runners = new ArrayList<>();
+		// 获取 ApplicationRunner 与 CommandLineRunner
 		runners.addAll(context.getBeansOfType(ApplicationRunner.class).values());
 		runners.addAll(context.getBeansOfType(CommandLineRunner.class).values());
+		// 排序
 		AnnotationAwareOrderComparator.sort(runners);
+		// 遍历集合，分别调用 run 方法
 		for (Object runner : new LinkedHashSet<>(runners)) {
 			if (runner instanceof ApplicationRunner) {
 				callRunner((ApplicationRunner) runner, args);
